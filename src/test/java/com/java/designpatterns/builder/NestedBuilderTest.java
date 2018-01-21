@@ -1,7 +1,12 @@
-package com.java.designpatterns.builder.nested;
+package com.java.designpatterns.builder;
 
-public class Main {
-	public static void main(String[] args) {
+import com.java.designpatterns.builder.nested.Account;
+import org.junit.Test;
+
+public class NestedBuilderTest {
+
+    @Test
+	public void test() {
         Account account = Account.newBuilder()
                 .id(10L)
                 .email("rahnemon2011@gmail.com")
@@ -18,6 +23,5 @@ public class Main {
                 .build();
 
         System.out.println(account.getId() + " " + account.getAddress().getCity());
-        
     }
 }

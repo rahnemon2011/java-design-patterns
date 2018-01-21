@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ir.hadi</groupId>
-    <artifactId>example</artifactId>
+    <artifactId>javadesignpatterns</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <build>
         <plugins>
@@ -20,7 +20,7 @@
     </build>
     <packaging>jar</packaging>
 
-    <name>example</name>
+    <name>javadesignpatterns</name>
     <description>Learning New Things</description>
 
     <properties>
@@ -30,7 +30,13 @@
     </properties>
 
     <dependencies>
-
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 </project>

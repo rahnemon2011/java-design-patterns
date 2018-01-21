@@ -3,9 +3,11 @@ package com.java.designpatterns.abstractfactory.shape;
 import com.java.designpatterns.abstractfactory.AbstractFactory;
 import com.java.designpatterns.abstractfactory.color.Color;
 
+import java.util.InputMismatchException;
+
 public class ShapeFactory extends AbstractFactory {
 
-	protected Shape getShape(String shape) throws Exception {
+	protected Shape getShape(String shape) throws UnsupportedOperationException {
 
 		switch (shape.toLowerCase()) {
 		case "rectangle":
@@ -15,7 +17,7 @@ public class ShapeFactory extends AbstractFactory {
 		case "square":
 			return new Square();
 		default:
-			throw new Exception("Invalid Input");
+			throw new UnsupportedOperationException("Invalid Input");
 		}
 
 	}

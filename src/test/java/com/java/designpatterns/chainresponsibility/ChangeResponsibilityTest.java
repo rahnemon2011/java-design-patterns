@@ -1,10 +1,13 @@
 package com.java.designpatterns.chainresponsibility;
 
+import org.junit.Test;
+
 import java.util.Scanner;
 
-public class ATMDemo {
+public class ChangeResponsibilityTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void atmTest() {
 
         ATMDispenseChain atmDispenseChain = new ATMDispenseChain();
 

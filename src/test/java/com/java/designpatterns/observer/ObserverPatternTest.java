@@ -1,7 +1,11 @@
 package com.java.designpatterns.observer;
 
+import org.junit.Test;
+
 public class ObserverPatternTest {
-    public static void main(String[] args) {
+
+    @Test
+    public void test() {
         MyTopic myTopic = new MyTopic();
 
         Observer ob1 = new MyTopicSubscriber("ob1", myTopic);

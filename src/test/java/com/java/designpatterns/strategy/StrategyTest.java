@@ -1,9 +1,13 @@
 package com.java.designpatterns.strategy;
 
+import org.junit.Test;
+
 import java.math.BigDecimal;
 
-public class StrategyDemo {
-    public static void main(String[] args) {
+public class StrategyTest {
+
+    @Test
+    public void test() {
         ShoppingCard shoppingCard = new ShoppingCard();
         shoppingCard.add(new Item("Hadi", 2, BigDecimal.valueOf(1800L)));
 

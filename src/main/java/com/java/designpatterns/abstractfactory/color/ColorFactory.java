@@ -11,7 +11,7 @@ public class ColorFactory extends AbstractFactory {
     }
 
     @Override
-    protected Color getColor(String color) throws Exception {
+    protected Color getColor(String color) throws UnsupportedOperationException {
         switch (color.toLowerCase()) {
             case "red":
                 return new Red();
@@ -20,7 +20,7 @@ public class ColorFactory extends AbstractFactory {
             case "green":
                 return new Green();
             default:
-                throw new Exception("Invalid Input");
+                throw new UnsupportedOperationException("Invalid Input");
         }
     }
 }
