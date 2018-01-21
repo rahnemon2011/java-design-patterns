@@ -4,6 +4,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public abstract class NestedBuilder<T, V> {
+
+	protected T parent;
+
+	public abstract V build();
+
 	/**
 	 * To get the parent builder
 	 *
@@ -13,8 +18,8 @@ public abstract class NestedBuilder<T, V> {
 		Class<?> parentClass = parent.getClass();
 		try {
 			V build = this.build();
-			String methodname = "with" + build.getClass().getSimpleName();
-			Method method = parentClass.getDeclaredMethod(methodname, build.getClass());
+			String methodName = "with" + build.getClass().getSimpleName();
+			Method method = parentClass.getDeclaredMethod(methodName , build.getClass());
 			method.invoke(parent, build);
 		} catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
 			e.printStackTrace();
@@ -22,12 +27,10 @@ public abstract class NestedBuilder<T, V> {
 		return parent;
 	}
 
-	public abstract V build();
-
-	protected T parent;
-
 	/**
+	 *
 	 * @param parent
+	 * @param <P>
 	 * @return
 	 */
 	public <P extends NestedBuilder<T, V>> P withParentBuilder(T parent) {

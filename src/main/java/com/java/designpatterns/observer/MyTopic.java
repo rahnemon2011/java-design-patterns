@@ -5,10 +5,10 @@ import java.util.List;
 
 public class MyTopic implements Subject {
 
-    private List<Observer> observers = new ArrayList<Observer>();
+    private List<Observer> observers = new ArrayList<>();
     private String message;
     private boolean changed;
-    private Object object = new Object();
+    private final Object object = new Object();
 
     public void postMessage(String message) {
         System.out.println("Message posted to the topic:" + message);
@@ -35,7 +35,7 @@ public class MyTopic implements Subject {
             if (!changed)
                 return;
 
-            localObservers = new ArrayList<Observer>(observers);
+            localObservers = new ArrayList<>(observers);
         }
         for (Observer observer : localObservers) {
             observer.update();

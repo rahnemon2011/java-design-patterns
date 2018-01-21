@@ -21,7 +21,7 @@
     <packaging>jar</packaging>
 
     <name>javadesignpatterns</name>
-    <description>Learning New Things</description>
+    <description>Learning Java Design Patterns</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
