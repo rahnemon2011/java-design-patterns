@@ -17,6 +17,9 @@ public class ObserverPatternTest {
         myTopic.register(ob3);
 
         myTopic.postMessage("Hey");
-        myTopic.notifyObservers();
+
+        myTopic.unRegister(ob2);
+
+        myTopic.postMessage("Hey2");
     }
 } 

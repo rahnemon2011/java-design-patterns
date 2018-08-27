@@ -1,6 +1,7 @@
 package com.java.designpatterns.builder;
 
 import com.java.designpatterns.builder.nested.Account;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class NestedBuilderTest {
@@ -23,5 +24,6 @@ public class NestedBuilderTest {
                 .build();
 
         System.out.println(account.getId() + " " + account.getAddress().getCity());
+        Assert.assertEquals("Chemnitz", account.getAddress().getCity());
     }
 }

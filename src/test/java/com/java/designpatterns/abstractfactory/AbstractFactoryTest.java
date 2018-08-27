@@ -7,7 +7,7 @@ import org.junit.Test;
 public class AbstractFactoryTest {
 
     @Test
-    public void test() throws UnsupportedOperationException {
+    public void test() {
         AbstractFactory shape = FactoryProducer.getFactory("shape");
         Shape circle = shape.getShape("circle");
         Shape rectangle = shape.getShape("rectangle");
